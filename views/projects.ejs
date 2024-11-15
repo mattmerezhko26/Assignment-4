@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body tabindex="-1">
-    <!-- Include navbar with the page set to /solutions/projects -->
+ 
     <%- include('partials/navbar', { page: '/solutions/projects' }) %>
     <br />
     <div class="container mx-auto">
-      <!-- Hero section with updated text -->
+
       <div class="hero bg-base-200 rounded-lg p-6">
         <div class="hero-content text-center">
           <div class="max-w-md">
             <h1 class="text-5xl font-bold">Projects</h1>
             <p class="py-6">Discover the solutions we offer across various sectors.</p>
-            <!-- Sector Filter Links (hard-coded) -->
+   
             <div class="sector-filters">
               <a href="/solutions/projects?sector=Industry" class="btn btn-primary">Industry</a>
               <a href="/solutions/projects?sector=Transportation" class="btn btn-primary">Transportation</a>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <br />
-      <!-- Table to display projects -->
+
       <table class="table w-full">
         <thead>
           <tr>
@@ -39,7 +39,7 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Iterate over projects and display each project in a table row -->
+
           <% projects.forEach(project => { %>
           <tr>
             <td><%= project.title %></td>
