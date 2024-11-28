@@ -13,8 +13,6 @@
 ********************************************************************************/
 
 
-
-
 const projectData = require("./modules/projects");
 const path = require("path");
 
@@ -58,7 +56,7 @@ app.get("/solutions/projects/:id", async (req, res) => {
     if (!project) {
       return res.status(404).render("404", { message: `Project with ID ${req.params.id} not found.` });
     }
-    res.render("projectDetails", { project });
+    res.render("project", { project });
   } catch (err) {
     res.status(404).render("404", { message: "An error occurred while fetching the project." });
   }
